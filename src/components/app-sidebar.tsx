@@ -9,7 +9,8 @@ import userImage from "../assets/barraLateral/user.png"
 import bg from "../assets/barraLateral/bg.png"
 import div from "../assets/barraLateral/Divider.png"
 import AppRoutes from '../routes/Routex' 
-//<AppRoutes>
+import { NavLink } from "react-router-dom";
+
 
 
 export function AppSidebar() {
@@ -44,7 +45,9 @@ export function AppSidebar() {
       </SidebarContent>
 
       <SidebarFooter className="bg-primary text-[16px]  ">
-        <text className="p-5 ">Sair</text>
+        <NavLink to="/loginPage" className="block p-5 text-secondary hover:text-secondary/80">
+          Sair
+        </NavLink>
         
       </SidebarFooter> 
     </Sidebar>
