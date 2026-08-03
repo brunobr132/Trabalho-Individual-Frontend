@@ -1,0 +1,39 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+@import "@fontsource-variable/inter";
+
+/* @custom-variant dark (&:is(.dark *)); */
+
+@theme {
+    --color-primary: #f5f5f5;
+    --color-fourth: #ff8f0e;
+    --color-fourthSecond: #FFAE50;
+    
+    --color-secondary: #2B2B2B;
+
+    --font-poppins: "Poppins", sans-serif;
+}
+
+@layer base {
+    html,
+    body,
+    #root {
+        font-family: font-poppins;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-family: font-poppins;
+        letter-spacing: -0.03em;
+    }
+
+    body {
+
+      @apply antialiased bg-primary font-poppins;
+    }
+}
