@@ -8,6 +8,9 @@ import {
 import userImage from "../assets/barraLateral/user.png"
 import bg from "../assets/barraLateral/bg.png"
 import div from "../assets/barraLateral/Divider.png"
+import AppRoutes from '../routes/Routex' 
+//<AppRoutes>
+
 
 export function AppSidebar() {
   return (
@@ -21,15 +24,19 @@ export function AppSidebar() {
         </SidebarHeader>
       
       <SidebarContent className="bg-primary text-secondary text-[16px]  w-20rem h-17.75  ">
-        <div className=" p-5 flex flex-col gap-5">
-          <text>Editar dados</text>
-          <img src={div} alt="userIcon" className=" w-20rem h-1px" />
-          <text>Meus pedidos</text>
-          <img src={div} alt="userIcon" className=" w-20rem h-1px" />
-          <text>Meus produtos</text>
-          <img src={div} alt="userIcon" className=" w-20rem h-1px" />
-          <text>Meu carrinho</text>
-        </div>
+       {/* <AppRoutes/> */}
+          <nav className=" p-5 flex flex-col gap-5">
+            <link></link>
+              <text>Editar dados</text>
+              <img src={div} alt="userIcon" className=" w-20rem h-1px" />
+              <text>Meus pedidos</text>
+              <img src={div} alt="userIcon" className=" w-20rem h-1px" />
+              <text>Meus produtos</text>
+              <img src={div} alt="userIcon" className=" w-20rem h-1px" />
+              <text>Meu carrinho</text>
+          </nav>
+
+
 
         <SidebarGroup />
         <SidebarGroup />
