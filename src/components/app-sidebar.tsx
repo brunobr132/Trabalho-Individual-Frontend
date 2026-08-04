@@ -8,7 +8,7 @@ import {
 import userImage from "../assets/barraLateral/user.png"
 import bg from "../assets/barraLateral/bg.png"
 import div from "../assets/barraLateral/Divider.png"
-import AppRoutes from '../routes/Routex' 
+
 import { NavLink } from "react-router-dom";
 
 

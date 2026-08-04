@@ -3,13 +3,12 @@ import React from "react"
 import { useState, useEffect } from "react"
 import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar"
 import { AppSidebar } from "@/components/app-sidebar"
-import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel"
+import { Carousel, CarouselContent, CarouselItem, type  CarouselApi  } from "@/components/ui/carousel"
 import { Card, CardContent } from "@/components/ui/card"
 
 import FavoriteButton from "../components/ui/FavButton";
 import Categorias from "@/components/categorias"
 import ParaVoce from "@/components/produtoUser"
-import AppRoutes from '../routes/Routex'
 import categoriaImg from "../assets/homePage/categorias/categoriaImg"
 import produto_1 from "../assets/homePage/produtos/produtos_1"
 import produto_2 from "../assets/homePage/produtos/produtos_2";
@@ -31,7 +30,7 @@ import linkedinIcon from "../assets/homePage/Redes/Linkedin.png";
 
 function Home({ children }: { children: React.ReactNode }) {
    
-    const [api, setApi] = useState();
+    const [api, setApi] = React.useState<CarouselApi>()
     const [current, setCurrent] = useState(0);
     const carouselImages = [car1, car2, car3];
 
@@ -64,7 +63,7 @@ function Home({ children }: { children: React.ReactNode }) {
                     </header>
 
                     <section className="flex items-center  gap-1 p-10">
-                            <img src={logo} className=" " />
+                            <img src={logo} className="h-[42px]  " />
                             <span className="text-[24px] text-fourth  font-semibold">Bem-vindo à Elektro!</span>
                     </section>
 
