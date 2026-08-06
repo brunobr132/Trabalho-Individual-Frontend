@@ -27,7 +27,6 @@ export function AppSidebar() {
       <SidebarContent className="bg-primary text-secondary text-[16px]  w-20rem h-17.75  ">
        {/* <AppRoutes/> */}
           <nav className=" p-5 flex flex-col gap-5">
-            <link></link>
               <text>Editar dados</text>
               <img src={div} alt="userIcon" className=" w-20rem h-1px" />
               <text>Meus pedidos</text>
@@ -45,7 +44,7 @@ export function AppSidebar() {
       </SidebarContent>
 
       <SidebarFooter className="bg-primary text-[16px]  ">
-        <NavLink to="/loginPage" className="block p-5 text-secondary hover:text-secondary/80">
+        <NavLink to="/" className="block p-5 text-secondary hover:text-secondary/80">
           Sair
         </NavLink>
         

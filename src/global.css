@@ -2,6 +2,8 @@
 @import "tw-animate-css";
 @import "shadcn/tailwind.css";
 @import "@fontsource-variable/inter";
+@import url('https://fonts.googleapis.com/css2?family=Russo+One:ital,wght@0,400&display=swap');
+
 
 /* @custom-variant dark (&:is(.dark *)); */
 
@@ -11,15 +13,15 @@
     --color-fourthSecond: #FFAE50;
     
     --color-secondary: #2B2B2B;
-
-    --font-poppins: "Poppins", sans-serif;
+    --font-russo: 'Russo One', sans-serif;
+    --font-montserrat: 'Montserrat', sans-serif;
 }
 
 @layer base {
     html,
     body,
     #root {
-        font-family: font-poppins;
+        font-family: font-montserrat;
     }
 
     h1,
@@ -28,12 +30,12 @@
     h4,
     h5,
     h6 {
-        font-family: font-poppins;
+        font-family: font-montserrat;
         letter-spacing: -0.03em;
     }
 
     body {
 
-      @apply antialiased bg-primary font-poppins;
+      @apply antialiased bg-primary font-montserrat;
     }
 }

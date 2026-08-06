@@ -1,5 +1,5 @@
 const produto_3 = [
-    {name:"Smartphone" , imageSrc:"src/assets/homePage/produtos/Smartphone.png", preco:"R$ 3.200,00"},
+    {name:"Smartphone" , imageSrc:"src/assets/homePage/produtos/Smartphone.png", preco:"R$ 3.200,00", },
     {name:"Smartwatch" , imageSrc:"src/assets/homePage/produtos/Smartwatch.png", preco:"R$ 900,00"},
     {name:"Mouse" , imageSrc:"src/assets/homePage/produtos/Mouse.png", preco:"R$ 250,00"},
     {name:"Fone de Ouvido" , imageSrc:"src/assets/homePage/produtos/Fone.png", preco:"R$ 50,00"},

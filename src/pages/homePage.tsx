@@ -6,6 +6,7 @@ import { AppSidebar } from "@/components/app-sidebar"
 import { Carousel, CarouselContent, CarouselItem, type  CarouselApi  } from "@/components/ui/carousel"
 import { Card, CardContent } from "@/components/ui/card"
 
+
 import FavoriteButton from "../components/ui/FavButton";
 import Categorias from "@/components/categorias"
 import ParaVoce from "@/components/produtoUser"
@@ -27,6 +28,7 @@ import instagramIcon from "../assets/homePage/Redes/Insta.png";
 import tiktokIcon from "../assets/homePage/Redes/tiktok.png";
 import twitterIcon from "../assets/homePage/Redes/Twitter.png";
 import linkedinIcon from "../assets/homePage/Redes/Linkedin.png";
+import { NavLink } from "react-router-dom";
 
 function Home({ children }: { children: React.ReactNode }) {
    
@@ -50,7 +52,7 @@ function Home({ children }: { children: React.ReactNode }) {
     
     return(
         
-        <div className=" h-[71px] w-screen bg-secondary ">
+        <div className="font-montserrat h-[71px] w-screen bg-secondary ">
             <SidebarProvider >
 
                 <AppSidebar />
@@ -62,12 +64,12 @@ function Home({ children }: { children: React.ReactNode }) {
                             </div>
                     </header>
 
-                    <section className="flex items-center  gap-1 p-10">
+                    <section className="flex items-center ml-5 p-11">
                             <img src={logo} className="h-[42px]  " />
-                            <span className="text-[24px] text-fourth  font-semibold">Bem-vindo à Elektro!</span>
+                            <span className=" font-russo text-[20px] text-fourth  font-semibold">Bem-vindo à Elektro!</span>
                     </section>
 
-                    <div className="flex flex-col p-8">
+                    <div className="flex flex-col pl-8">
                         <Carousel setApi={setApi} className="w-full max-w-[327px]">
                             <CarouselContent className="-ml-4">
                                 {carouselImages.map((image, index) => (
@@ -107,7 +109,7 @@ function Home({ children }: { children: React.ReactNode }) {
                         </div>
                             
                         <div className="flex flex-col gap-10 mt-[20px] mb-10">
-                                <img src={div} alt="userIcon" className=" w-20rem h-1px" />
+                                <img src={div} alt="divisão" className=" w-20rem h-1px" />
                         </div>
                         <div className=" flex flex-col  w-full max-w-xs mb-5">
                                 <span className=" text-secondary text-[16px]">Categorias Elektro</span>
@@ -126,16 +128,16 @@ function Home({ children }: { children: React.ReactNode }) {
 
                         <span className=" text-secondary text-[16px] ">Para Você</span>
                         <div className="flex flex-col gap-10 mt-2 mb-10">
-                            <img src={div} alt="userIcon" className=" w-20rem h-1px" />
+                            <img src={div} alt="divisão" className=" w-20rem h-1px" />
                         </div>
 
-                        <Carousel opts={{ align: "start" }} className="w-full max-w-[20rem] h-[15rem]">
+                        <Carousel opts={{ align: "start" }} className=" max-w-[20rem] h-[15rem]">
                             <CarouselContent className="">
                                 {produto_1.map((produto, index) => (
                                     <CarouselItem key={index} className=" basis-1/2 ">
                                     <div className="p-[9.5px]">
                                     <Card className="shadow-md shadow-secondary ">
-                                        <CardContent className= "flex flex-col text-left ">
+                                        <CardContent className= "flex relative items-baseline-last">
                                             <ParaVoce
                                                 name={produto.name}
                                                 imageSrc={produto.imageSrc}
@@ -152,7 +154,7 @@ function Home({ children }: { children: React.ReactNode }) {
 
                         <span className=" text-secondary text-[16px]">Produtos em destaque</span>
                         <div className="flex flex-col mt-[20px]  mb-10">
-                            <img src={div} alt="userIcon" className=" w-20rem h-1px" />
+                            <img src={div} alt="divisão" className=" w-20rem h-1px" />
                         </div>
 
                         <Carousel opts={{ align: "start" }} className="w-full max-w-[20rem] h-[15rem]">
@@ -161,7 +163,7 @@ function Home({ children }: { children: React.ReactNode }) {
                                 <CarouselItem key={index} className=" basis-1/2 ">
                                 <div className="p-[9.5px]">
                                     <Card className=" shadow-md shadow-secondary  ">
-                                        <CardContent className= "flex flex-col text-left ">
+                                        <CardContent className= "flex items-baseline-last  gap-1">
                                             <Destaque
                                                 name={produto.name}
                                                 imageSrc={produto.imageSrc}
@@ -178,7 +180,7 @@ function Home({ children }: { children: React.ReactNode }) {
 
                             <span className=" text-secondary text-[16px]">Mais Vendidos</span>
                             <div className="flex flex-col mt-[20px]  mb-10">
-                                <img src={div} alt="userIcon" className=" w-20rem h-1px" />
+                                <img src={div} alt="divisão" className=" w-20rem h-1px" />
                             </div>
 
                             <Carousel opts={{ align: "start" }} className="w-full max-w-[20rem] h-[15rem]">
@@ -187,12 +189,17 @@ function Home({ children }: { children: React.ReactNode }) {
                                     <CarouselItem key={index} className=" basis-1/2 ">
                                     <div className="p-[9.5px]">
                                     <Card className=" shadow-md shadow-secondary ">
-                                        <CardContent className= "flex flex-col text-left ">
-                                            <MaisVendidos
-                                                name={produto.name}
-                                                imageSrc={produto.imageSrc}
-                                                preco={produto.preco}
-                                            />
+                                        <CardContent className= "flex items-end  ">
+                                            
+                                            <NavLink to="/Error">
+
+                                                <MaisVendidos
+                                                    name={produto.name}
+                                                    imageSrc={produto.imageSrc}
+                                                    preco={produto.preco}
+                                                    />
+                                            </NavLink>
+                                            
                                             <FavoriteButton />
                                            
                                         </CardContent>

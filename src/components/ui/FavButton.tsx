@@ -7,6 +7,8 @@ export default function FavoriteButton() {
   const [ativo, setativo] = useState(false);
 
   return (
-    <Button  size="icon"  onClick={() => setativo(!ativo)}className="">  <Heart className={`h-5 w-5 transition-all duration-300 ${ativo? "fill-red-500 text-black scale-100": "fill-transparent text-black scale-100"}`}/> </Button>
+    <Button size="icon" onClick={() => setativo(!ativo)} className="-ml-6" aria-label="Favoritar">
+      <Heart className={`h-6 w-6 transition-all duration-300 ${ativo ? "fill-red-500 text-black" : "fill-transparent text-black"}`} />
+    </Button>
   );
 }
