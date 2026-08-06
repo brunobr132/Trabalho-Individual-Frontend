@@ -13,7 +13,7 @@ export default function Error(){
                 <span className=" font-montserrat text-[16pxs] text-secondary">Infelizmente, parece que não encontramos o produto desejado.</span>
             </div>
             
-        <NavLink to="/Home" className="  mt-[170px]  rounded-full bg-[#d9d9d9] flex ml-auto justify-end h-[40px] w-[40px] items-center  p-2 text-secondary hover:text-secondary/80">
+        <NavLink to="/Home" className="absolute bottom-6 right-6 rounded-full  mt-[170px]  rounded-full bg-[#d9d9d9] flex ml-auto justify-end h-[40px] w-[40px] items-center  p-2 text-secondary hover:text-secondary/80">
                 <ArrowLeft/> 
         </NavLink>
         </div>
