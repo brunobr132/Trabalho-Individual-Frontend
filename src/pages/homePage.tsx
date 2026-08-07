@@ -99,7 +99,7 @@ function Home({ children }: { children: React.ReactNode }) {
                                 ${
                                     isActive
                                     ? "bg-secondary scale-125 "
-                                    : "bg-[#D9D9D9] scale-100 opacity-40 hover:opacity-75"
+                                    : " cursor-pointer bg-[#D9D9D9] scale-100 opacity-40 hover:opacity-75"
                                 }
                                 `}
                                 aria-label={`Ir para slide ${index + 1}`}

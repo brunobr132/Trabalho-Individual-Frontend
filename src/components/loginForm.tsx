@@ -33,7 +33,7 @@ export function LoginForm({
   }
 
   return (
-    <div className={cn("flex flex-col ", className)} {...props}>
+    <div className={cn("flex flex-col   ", className)} {...props}>
 
           <form>
             <FieldGroup>
@@ -57,7 +57,7 @@ export function LoginForm({
                   </div>
               </Field>
 
-              <Field className="ml-4" >
+              <Field className="  ml-4" >
 
                 
                 
@@ -80,7 +80,7 @@ export function LoginForm({
                     <button
                       type="button"
                       onClick={togglePasswordVisibility}
-                      className="relative   text-gray-600 hover:text-black focus:outline-none"
+                      className="relative cursor-pointer  text-gray-600 hover:text-black focus:outline-none"
                       tabIndex={-1}
                     >
                       {showSenha ? <EyeOff size={20}  /> : <Eye size={20}  />}
@@ -91,19 +91,19 @@ export function LoginForm({
               </Field>
                   <a
                     href="#"
-                    className=" text-right ml-auto inline-block text-sm underline-offset-4 underline"
+                    className=" text-right  inline-block text-sm underline-offset-4 underline"
                   >
                     Esqueci minha senha
                   </a>
               <Field >
-                <NavLink to="/Home"  className="flex text-center pl-21">
-                  <Button variant="outline" className="p-2.5 text-[14px] bg-secondary text-white rounded-full py-3 px-6 h-[48px] w-[188px]" type="button"  >Entrar</Button>
+                <NavLink to="/Home"  className=" flex text-center pl-21">
+                  <Button variant="outline" className="cursor-pointer p-2.5 text-[14px] bg-secondary text-white rounded-full py-3 px-6 h-[48px] w-[188px]" type="button"  >Entrar</Button>
                 </NavLink>
                 
-                <div  className="pl-[38px] flex flex-row gap-[20px]">
+                <div  className="pl-[38px]  flex flex-row gap-[20px]">
                   
                   <div className="  p-5 border-0 border-t-2 border-black">
-                    <Button variant="outline" className="bg-secondary rounded-full h-17 w-17 flex items-center justify-center "  size="icon">
+                    <Button variant="outline" className="cursor-pointer bg-secondary rounded-full h-17 w-17 flex items-center justify-center "  size="icon">
                       <img src={IconF} className=" h-[24px] " />
                     </Button>
                   </div>
@@ -111,7 +111,7 @@ export function LoginForm({
                   <text>ou</text>
 
                   <div className=" p-5 border-0 border-t-2 border-black">
-                    <Button  variant="outline" className=" bg-secondary rounded-full h-17 w-17 flex items-center justify-center">
+                    <Button  variant="outline" className=" bg-secondary cursor-pointer rounded-full h-17 w-17 flex items-center justify-center">
                       <img src={IconG} className=" h-[24px] " />
                     </Button>
                   </div>

@@ -1,4 +1,5 @@
-import { Button,   Input } from "@base-ui/react";
+import { Button, } from "@base-ui/react";
+import { Input } from "@/components/ui/input"
 
 import { NavLink } from "react-router-dom";
 import { FieldGroup, Field, FieldDescription, FieldLabel, } from "../components/ui/field";
@@ -8,12 +9,12 @@ import IconF from "../assets/iconF.png"
 export default function RegisterForm(){
     return(
         <form>
-            <FieldGroup className="p-5">
+            <FieldGroup className="flex items-center p-5">
 
               <div  className="pl-[32px] flex flex-row gap-[20px] items-end">   
 
                   <div className="  p-5 border-0 border-b-2 border-black">
-                    <Button variant="outline" className="bg-secondary rounded-full h-17 w-17 flex items-center justify-center "  size="icon">
+                    <Button variant="outline" className="cursor-pointer bg-secondary rounded-full h-17 w-17 flex items-center justify-center "  size="icon">
                       <img src={IconF} className=" h-[24px] " />
                     </Button>
                   </div>
@@ -21,19 +22,19 @@ export default function RegisterForm(){
                   <span className=" text-sm font-medium">ou</span>
 
                   <div className=" p-5 border-0 border-b-2 border-black">
-                    <Button  variant="outline" className=" bg-secondary rounded-full h-17 w-17 flex items-center justify-center">
+                    <Button  variant="outline" className="cursor-pointer bg-secondary rounded-full h-17 w-17 flex items-center justify-center">
                       <img src={IconG} className=" h-[24px] " />
                     </Button>
                   </div>
               </div>
-              <Field className=""  >
+              <Field   >
 
                 <FieldLabel htmlFor="Nome">Nome</FieldLabel>
 
                   <Input 
                     id="Nome"
                     type="Nome"
-                    className=" border-0 border-b-2 bg-none border-[#B9B9B9]" 
+                    className="  border-0 border-b-2 bg-none border-[#B9B9B9]" 
                     placeholder="Digite seu nome completo"
                   />
 
@@ -93,7 +94,7 @@ export default function RegisterForm(){
               </Field>
               <Field >
                 <NavLink to="/home"  className="flex text-center pl-18.75">
-                  <Button variant="outline" className="p-2 text-[14px] bg-secondary text-white rounded-full py-3 px-6 h-[48px] w-[188px]" type="button"  >Cadastrar-se!</Button>
+                  <Button variant="outline" className="cursor-pointer p-2 text-[14px] bg-secondary text-white rounded-full py-3 px-6 h-[48px] w-[188px]" type="button"  >Cadastrar-se!</Button>
                 </NavLink>
                 
                 
